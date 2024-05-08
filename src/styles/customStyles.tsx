@@ -1,8 +1,12 @@
 import {
+  PaletteColorOptions,
+  SimplePaletteColorOptions,
   // PaletteColor,
   // PaletteColorOptions,
+  Color,
   createTheme,
-} from '@mui/material/styles';
+} from '@mui/material';
+import { ColorPartial } from '@mui/material/styles/createPalette';
 /* // declare module "@mui/material/styles" {
 //   interface Palette {
 //     neutrals: PaletteColor;
@@ -13,6 +17,12 @@ import {
 //     outLines: PaletteColorOptions;
 //   }
 // } */
+
+interface customColor extends Color {
+  A900?: string;
+}
+
+export type CustomPaletteColorOptions = SimplePaletteColorOptions | ColorPartial | customColor;
 
 const customTheme = createTheme({
   palette: {
@@ -46,7 +56,8 @@ const customTheme = createTheme({
       A200: '#4D4639',
       A400: '#FFFFFF',
       A700: '#EDEDED',
-      A900: '#f8f0db'  },
+      A900: '#f8f0db'
+  } as CustomPaletteColorOptions,
     error: {
       main: '#BA1A1A',
       light: '#FFDAD6',
