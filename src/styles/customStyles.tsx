@@ -22,7 +22,10 @@ interface customColor extends Color {
   A900?: string;
 }
 
-export type CustomPaletteColorOptions = SimplePaletteColorOptions | ColorPartial | customColor;
+export type CustomPaletteColorOptions =
+  | SimplePaletteColorOptions
+  | ColorPartial
+  | customColor;
 
 const customTheme = createTheme({
   palette: {
@@ -56,8 +59,8 @@ const customTheme = createTheme({
       A200: '#4D4639',
       A400: '#FFFFFF',
       A700: '#EDEDED',
-      A900: '#f8f0db'
-  } as CustomPaletteColorOptions,
+      A900: '#f8f0db',
+    } as CustomPaletteColorOptions,
     error: {
       main: '#BA1A1A',
       light: '#FFDAD6',
