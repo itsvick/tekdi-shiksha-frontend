@@ -1,3 +1,4 @@
+'use client';
 import { Box, Stack } from '@mui/material';
 import Menu, { MenuProps } from '@mui/material/Menu';
 import React, { useState } from 'react';
@@ -86,7 +87,7 @@ const Header: React.FC = () => {
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpenDrawer(newOpen);
   };
-  const MenuDrawer = dynamic(() => import('./../pages/LeftDrawer'), {
+  const MenuDrawer = dynamic(() => import('./MenuDrawer'), {
     ssr: false,
   });
 

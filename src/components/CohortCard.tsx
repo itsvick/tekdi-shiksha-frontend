@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { CardContent, CardMedia, Typography, Box } from '@mui/material';

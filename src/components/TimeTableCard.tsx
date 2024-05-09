@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Card, CardContent, Typography, Grid, Box } from '@mui/material';
 import { TimeTableCardProps } from '@/utils/Interfaces';

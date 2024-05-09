@@ -1,3 +1,4 @@
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 import {
   Box,
   Button,
@@ -7,27 +8,27 @@ import {
   InputLabel,
   OutlinedInput,
 } from '@mui/material';
-import React, { useEffect, useMemo } from 'react';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Snackbar, { SnackbarOrigin } from '@mui/material/Snackbar';
-import { Visibility, VisibilityOff } from '@mui/icons-material';
+import React, { useEffect, useMemo } from 'react';
 
-import Checkbox from '@mui/material/Checkbox';
 import CloseIcon from '@mui/icons-material/Close';
-import Image from 'next/image';
+import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
-// import { getUserId } from '../services/ProfileService';
-import Loader from '../components/Loader';
 import MenuItem from '@mui/material/MenuItem';
-import appLogo2 from '../../public/appLogo.png';
+import Image from 'next/image';
 import config from '../../config.json';
+import appLogo2 from '../../public/appLogo.png';
 import { login } from '../services/LoginService';
+// import { getUserId } from '../services/ProfileService';
+const Loader = dynamic(() => import('../components/Loader'), { ssr: false });
 // import { useLocation } from 'react-router-dom';
+import { useTheme } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 
+import dynamic from 'next/dynamic';
 import { getUserId } from '../services/ProfileService';
 interface State extends SnackbarOrigin {
   openModal: boolean;

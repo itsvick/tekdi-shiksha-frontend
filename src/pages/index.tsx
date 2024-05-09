@@ -6,7 +6,6 @@ import dynamic from 'next/dynamic';
 
 // Import dynamic components
 const Login = dynamic(() => import('./Login'), { ssr: false });
-const Dashboard = dynamic(() => import('./Dashboard'), { ssr: false });
 
 // Define the Home component
 const Home: React.FC = () => {

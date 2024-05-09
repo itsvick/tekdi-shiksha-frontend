@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect } from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
